@@ -1,0 +1,7 @@
+# local credentials
+.env
+.env.*
+!.env.example
+node_modules/
+/SUBMISSION.md
+/devpost/learner-profile.md
