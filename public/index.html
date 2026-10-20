@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fineprint — every rule, with the receipt</title>
+<link rel="stylesheet" href="/styles.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23fff3a3'/><text x='16' y='23' font-size='20' text-anchor='middle' font-family='Georgia'>¶</text></svg>">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <h1>Fineprint</h1>
+    <p class="tag">Contest rules → a checklist where every line comes with the receipt.</p>
+  </div>
+  <div class="meta">
+    <span id="mode" class="mode">…</span>
+    <label class="tz">Your time zone <select id="tz"></select></label>
+  </div>
+</header>
+
+<main class="grid">
+  <section class="left">
+    <div class="tabs" role="tablist">
+      <button class="tab active" data-slot="a" role="tab">Contest A</button>
+      <button class="tab" data-slot="b" role="tab">Contest B <span class="opt">(compare)</span></button>
+    </div>
+    <form id="input" class="card input">
+      <label>Name <input id="name" placeholder="e.g. Build With AI: Basics" autocomplete="off"></label>
+      <label>Rules page URL <input id="url" type="url" placeholder="https://…devpost.com/rules" autocomplete="off"></label>
+      <div class="or">or paste the rules text</div>
+      <textarea id="text" rows="5" placeholder="Paste the official rules here…"></textarea>
+      <div class="row">
+        <button type="submit" id="go" class="primary">Read the fine print</button>
+        <button type="button" id="example" class="ghost">Try an example</button>
+      </div>
+      <p id="status" class="status" aria-live="polite"></p>
+    </form>
+    <div class="card source">
+      <div class="source-head"><h2>Source</h2><span id="source-meta" class="muted"></span></div>
+      <div id="source" class="source-text muted">The rules text appears here. Click any checklist item to see the exact sentence it came from.</div>
+    </div>
+  </section>
+
+  <section class="right">
+    <div id="empty" class="card empty">
+      <h2>What Fineprint does</h2>
+      <ol>
+        <li>Reads a contest's official rules (URL or pasted text).</li>
+        <li>Pulls out <b>deadlines</b> (in your time zone), <b>eligibility</b>, <b>what to submit</b>, <b>how it's judged</b>, and <b>gotchas</b>.</li>
+        <li>Checks that every item's quote really appears in the rules, word for word. <span class="badge ok">✓ quote verified</span> <span class="badge warn">⚠ quote not found</span></li>
+        <li>Load a second contest and ask <b>“Can I stack these?”</b></li>
+      </ol>
+    </div>
+    <div id="compare" class="card compare hidden"></div>
+    <div id="checklist" class="card checklist hidden"></div>
+  </section>
+</main>
+<footer class="foot">Fineprint quotes the rules; it doesn't give legal advice. Always read the source.</footer>
+<script src="/app.js"></script>
+</body>
+</html>

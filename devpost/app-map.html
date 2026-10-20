@@ -1,0 +1,25 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Fineprint — app map</title>
+<style>body{font:15px/1.55 system-ui,sans-serif;background:#fbfaf7;color:#1d1d1f;max-width:860px;margin:0 auto;padding:28px}
+h1,h2{font-family:Georgia,serif}code{font:13px ui-monospace,monospace;background:#fff3a3;padding:1px 4px;border-radius:3px}
+.box{background:#fff;border:1px solid #e6e2d9;border-radius:10px;padding:14px 18px;margin:12px 0}
+svg text{font:13px system-ui}</style></head><body>
+<h1>Fineprint — app map</h1>
+<p>Follow one action — <b>“Read the fine print”</b> — through the code.</p>
+<svg viewBox="0 0 820 170" width="100%" role="img" aria-label="Request flow diagram">
+<g fill="#fff" stroke="#1d1d1f">
+<rect x="5" y="60" width="130" height="46" rx="8"/><rect x="170" y="60" width="130" height="46" rx="8"/>
+<rect x="335" y="10" width="150" height="40" rx="8"/><rect x="335" y="115" width="150" height="40" rx="8"/>
+<rect x="520" y="60" width="130" height="46" rx="8" fill="#fff3a3"/><rect x="685" y="60" width="130" height="46" rx="8"/></g>
+<g text-anchor="middle"><text x="70" y="88">public/app.js</text><text x="235" y="88">server.js</text>
+<text x="410" y="35">lib/llm.js (Nemotron)</text><text x="410" y="140">lib/heuristics.js</text>
+<text x="585" y="88">lib/verify.js</text><text x="750" y="88">checklist UI</text></g>
+<g stroke="#6b6b70" fill="none" marker-end="url(#a)"><path d="M135 83h33"/><path d="M300 75l33-40"/><path d="M300 92l33 40"/>
+<path d="M485 30l33 40"/><path d="M485 135l33-40"/><path d="M650 83h33"/></g>
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#6b6b70"/></marker></defs></svg>
+<div class="box"><h2>1. The button</h2><p><code>public/app.js</code> — the <code>#input</code> form's <code>onsubmit</code> posts to <code>/api/analyze</code>.</p></div>
+<div class="box"><h2>2. The server</h2><p><code>server.js</code> → <code>handleApi</code> → <code>loadSource</code> (fetches a URL or uses pasted text) → <code>analyze()</code>.</p></div>
+<div class="box"><h2>3. Reading</h2><p><code>lib/analyze.js</code> uses <code>lib/llm.js</code> when a key is set (falls back to <code>lib/heuristics.js</code> on any error), then <code>finalize()</code>.</p></div>
+<div class="box"><h2>4. The kernel: verification</h2><p><code>lib/verify.js</code> → <code>verifyQuote(source, quote)</code> normalizes spacing and curly quotes and requires an exact match. That's what turns the badge green or amber.</p></div>
+<div class="box"><h2>Practice to reuse</h2><p>When an AI produces facts from a document, make it return the evidence too — and check the evidence with code, not with another AI call.</p></div>
+</body></html>

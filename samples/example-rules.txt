@@ -1,0 +1,28 @@
+SAMPLE DATA — a fictional rules document written for Fineprint's "Try an example" button. Not a real contest.
+
+Pinecone Valley Civic App Challenge — Official Rules
+
+1. Dates
+Submission Period: March 2, 2027 (9:00 am Pacific Time) – April 13, 2027 (11:59 pm Pacific Time).
+Judging Period: April 15, 2027 (9:00 am Pacific Time) – April 30, 2027 (5:00 pm Pacific Time).
+Winners will be announced on or around May 7, 2027 (12:00 pm Pacific Time).
+
+2. Eligibility
+The Challenge is open to individuals who are at least 18 years of age at the time of entry and to teams of up to four eligible individuals.
+The Challenge is not open to employees of the Town of Pinecone Valley or members of their immediate family.
+
+3. What to Submit
+Each submission must include a working web or mobile app that helps residents use a town service.
+You must provide a link to a public code repository that includes an open source license file.
+You must include a demo video that is less than two (2) minutes long and publicly visible on YouTube.
+You must include a written description of no more than 300 words.
+Projects must be newly created during the Submission Period; previously published apps are not eligible.
+A project that has been submitted to any other competition may not be entered in this Challenge.
+
+4. Judging
+Entries will be judged on three equally weighted criteria: usefulness to residents, ease of use, and quality of the demo.
+Judges are not required to test the app and may judge based solely on the video and description.
+
+5. Prizes
+First place receives $3,000 and second place receives $1,000.
+Each project is eligible for one (1) prize only.

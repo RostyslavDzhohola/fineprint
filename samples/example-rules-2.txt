@@ -1,0 +1,12 @@
+SAMPLE DATA — a second fictional rules document for testing Fineprint's compare view. Not a real contest.
+
+Harbor City Open Data Sprint — Official Rules
+
+Submission Deadline: May 20, 2027 (5:00 pm Eastern Time).
+The Sprint is open to individuals who are at least 18 years of age.
+Projects may be newly created or, if the project existed prior to the Submission Period, must have been significantly updated during it.
+You must provide a URL to a working demo or hosted application.
+You must include a demo video under three (3) minutes, uploaded to YouTube or Vimeo.
+You must provide a link to a public code repository with an open source license file.
+Entries will be judged on impact, technical quality, and design, equally weighted.
+Each project is eligible for one (1) prize.
